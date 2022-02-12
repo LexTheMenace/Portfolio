@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://kit.fontawesome.com/9e5389ef97.js"
+    crossorigin="anonymous"
+  ></script>
     <link rel='stylesheet' href='style.css' />
     <title>Lex Pryor</title>
 </head>
@@ -21,7 +25,6 @@
             <li><a href="#hero" data-after="Home">Home</a></li>
             <li><a href="#projects" data-after="Projects">Projects</a></li>
             <li><a href="#about" data-after="About">About</a></li>
-            <li><a href="#contact" data-after="Contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -38,6 +41,11 @@
                 <h1> Lex <span></span></h1>
                 <a href='#projects' type='button' class="cta">Portfolio</a>
             </div>
+            <div class="" style="display: flex; justify-content: center;">
+                <div class="logo">
+
+                </div>
+            </div>
         </div>
     </section>
   <!-- END HERO SECTION -->
@@ -49,6 +57,33 @@
                         <h1 class="section-title">Recent <span>Projects</span></h1>
                     </div>
                     <div class="all-projects">
+                      <div class="project-item">
+                        <div class="project-info">
+                            <h1>Budget Calendar</h1>
+                            <h2>JavaScript, Angular</h2>
+                            <p>Calendar for expense tracking and planning.</p>
+                            <div class='project-links'>
+                             <a target='_blank' href='https://budg-calc.netlify.app'> Go to App </a> 
+                            </div>
+                          </div>
+                        <div class="project-img">
+                            <img src="./img/budg-cal.png" alt="img">
+                        </div>
+                    </div>
+                      <div class="project-item">
+                        <div class="project-info">
+                            <h1>Flashcard App</h1>
+                            <h2>JavaScript, Angular</h2>
+                            <p>An app for studying flashcards.</p>
+                            <div class='project-links'>
+                             <a target='_blank' href='https://happy-snyder-984689.netlify.app/'> Go to App </a> 
+                              <a target='_blank' href='https://github.com/LexTheMenace/Flashcard-client'> View Repo </a>
+                            </div>
+                          </div>
+                        <div class="project-img">
+                            <img src="./img/flashcard.png" alt="img">
+                        </div>
+                    </div>
                         <div class="project-item">
                             <div class="project-info">
                                 <h1>The Bartender Book</h1>
@@ -63,20 +98,7 @@
                                 <img src="./img/search-result-view.png" alt="img">
                             </div>
                         </div>
-                        <div class="project-item">
-                            <div class="project-info">
-                                <h1>Lex's Forum</h1>
-                                <h2>Javascript, React, Node, MongoDB</h2>
-                                <p>My Personal Forum. Stop by and comment on a topic!</p>
-                                <div class='project-links'>
-                                 <a target='_blank' href='https://lexs-forum.herokuapp.com/#/'> Go to App </a> 
-                                  <a target='_blank' href='https://github.com/LexTheMenace/Practice_Forum'> View Repo </a>
-                                </div>
-                              </div>
-                            <div class="project-img">
-                                <img src="./img/forum-home.png" alt="img">
-                            </div>
-                        </div>
+     
                     </div>
                 </div>
             </section>
@@ -94,42 +116,37 @@
         <h1 class="section-title">About <span>me</span></h1>
         <h2>Full Stack Developer</h2>
         <p> Web Developer with a background in Customer Service. Recognized as proactive, resourceful, and persistent problem-solver. Passionate about learning and improving. Excellent communicator with effective client relationship building skills. Graduate of Full-Stack Web Development Bootcamp through Vanderbilt University.</p>
-        <a href="./assets/Lex_Pryor_Resume.pdf" target='_blank' class="cta" download="Lex_Pryor_Resume">Download Resume</a>
+        <a href="./assets/Portfolio_Resume.pdf" target='_blank' class="cta" download="Lex_Pryor_Resume">Download Resume</a>
       </div>
     </div>
   </section>
   <!-- End About Section -->
-
-  <!-- Contact Section -->
+<!-- 
+  Contact Section 
   <section id="contact">
     <div class="contact container">
       <div><h1 class="section-title">Contact <span>me</span></h1></div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="icon"><img src="https://img.icons8.com/phone.png"/></div>
-          <div class="contact-info">
-            <h1>Phone</h1>
-            <h2>+1 860 983 5858</h2>
-          </div>
+        <div class="loading" style="display: none;">Submitting<span id="wait" style="position: absolute;">.</span>
         </div>
-        <div class="contact-item">
-          <div class="icon"><img style='min-width: 53px' src="https://img.icons8.com/email.png"/></div>
-          <div class="contact-info">
-            <h1>Email</h1>
-            <h2>lexthemenace@gmail.com</h2>
-            <h2>lexcpryor@gmail.com</h2>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="icon"><img id='ct_emblem' src="https://upload.wikimedia.org/wikipedia/commons/9/96/Flag_of_Connecticut.svg"/></div>
-          <div class="contact-info">
-            <h1>Address</h1>
-            <h2>Connecticut, USA</h2>
-          </div>
-        </div>
-      </div>
+          <form id="email-form" action="https://formsubmit.co/el/goteru" method="POST" >
+            <input type="hidden" name="_next" value=""/>
+           <div class="form-group">
+             <label>Your Email</label>
+             <input type="email" name="email" required placeholder="mshears@abccompany.com" />
+            </div>
+            <div class="form-group">
+              <label>Your Name and Company</label>
+              <input type="text" name="name" placeholder="Mike Shears from ABC Company" />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea type="text" name="message" placeholder="I saw your profile and would love your help!" required></textarea>
+            </div>
+            <button>Send</button>
+          </form>
+    
     </div>
-  </section>
+  </section> -->
   <!-- End Contact Section -->
 
   <!-- Footer -->
@@ -138,18 +155,18 @@
       <div class="brand"><h1><span>L</span>ex <span>P</span>ryor</h1></div>
       <h2>Let's Build Something</h2>
       <!-- TODO :: ADD SOCIALS -->
-<!--       <div class="social-icon">
+   <div class="social-icon">
         <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/facebook-new.png"/><i href='fa-facebook-square'></i></a>
+          <a href=""><i class='fab fa-facebook' ></i></a>
         </div>
         <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/instagram-new.png"/></a>
+          <a href="https://github.com/LexTheMenace" target="_blank"><i class="fab fa-github"></i></a>
         </div>
         <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/twitter.png"/></a>
+          <a href="https://twitter.com/LexTheMenace" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
-      </div> -->
-      <p>Copyright © <span> 2021 </span> Lex. All rights reserved</p>
+      </div> 
+      <p>Copyright © <span> 2022 </span> Lex. All rights reserved</p>
     </div>
   </section>
   <!-- End Footer -->
