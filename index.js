@@ -7,6 +7,8 @@ const menu_item = document.querySelectorAll(
 );
 const header = document.querySelector(".header.container");
 const email_form = document.querySelector("#email-form");
+const year = document.querySelector("#date");
+year.innerHTML = new Date().getFullYear();
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
@@ -56,21 +58,20 @@ email_form.addEventListener("submit", (e) => {
     body: JSON.stringify(formValue),
   })
     .then((res) => {
-		console.log(res);
       clearInterval(loadingInt);
       email_form.style.display = "block";
 
       document.querySelector(".loading").style.display = "none";
-     
-	  for (let el of e.target.elements) {
+
+      for (let el of e.target.elements) {
         if (el.value && el.name) {
           el.value = "";
         }
       }
     })
     .catch((err) => {
-		clearInterval(loadingInt);
-		email_form.style.display = "block";
-		document.querySelector(".loading").style.display = "none";
-	});
+      clearInterval(loadingInt);
+      email_form.style.display = "block";
+      document.querySelector(".loading").style.display = "none";
+    });
 });
